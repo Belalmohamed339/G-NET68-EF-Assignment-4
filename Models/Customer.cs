@@ -1,11 +1,13 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace G_NET68_EF_Assignment_4.Models
 {
     public class Customer
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string FullName { get; set; } = null!;
         public string NationalId { get; set; } = null!;

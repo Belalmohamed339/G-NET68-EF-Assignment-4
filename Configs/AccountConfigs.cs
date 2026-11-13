@@ -18,6 +18,7 @@ namespace G_NET68_EF_Assignment_4.Configs
             builder.Property(a => a.AccountType).IsRequired().HasColumnType("varchar(50)");
             builder.Property(a => a.OpeningDate).IsRequired().HasColumnType("date");
             builder.HasMany(t=>t.transactions).WithOne(a => a.Account).HasForeignKey(t => t.AccountID);
+            builder.Property(a => a.AccountNumber).UseIdentityColumn(10, 10);
         }
     }
 }

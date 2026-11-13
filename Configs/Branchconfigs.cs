@@ -18,6 +18,9 @@ namespace G_NET68_EF_Assignment_4.Configs
             builder.Property(b => b.Address).IsRequired().HasColumnType("varchar(200)");
             builder.Property(b => b.PhoneNumber).IsRequired().HasColumnType("varchar(15)");
             builder.HasMany(b => b.Accounts).WithOne(a => a.branch).HasForeignKey(a => a.BranchID);
+            builder .Property(b=>b.Code).UseIdentityColumn(1, 1);
+
+
 
         }
     }

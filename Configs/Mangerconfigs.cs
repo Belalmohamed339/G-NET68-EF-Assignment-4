@@ -19,6 +19,7 @@ namespace G_NET68_EF_Assignment_4.Configs
             builder.Property(m => m.Email).IsRequired().HasColumnType("varchar(100)");
             builder.Property(m => m.PhoneNumber).IsRequired().HasColumnType("varchar(15)");
             builder.Property(m => m.HireDate).IsRequired().HasColumnType("date");
+            builder.Property(m => m.Id).UseIdentityColumn(1, 1);
         }
     }
 }

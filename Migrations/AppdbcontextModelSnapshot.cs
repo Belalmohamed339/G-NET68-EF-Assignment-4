@@ -28,7 +28,7 @@ namespace G_NET68_EF_Assignment_4.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountNumber"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountNumber"), 10L, 10);
 
                     b.Property<string>("AccountType")
                         .IsRequired()
